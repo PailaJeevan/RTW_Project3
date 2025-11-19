@@ -1,0 +1,5 @@
+Timestamp,City,Country,Temperature (°C),Feels Like (°C),Humidity (%),Condition,Wind Speed (m/s)
+2025-11-19 22:20:56,Guntur,IN,18.95,18.81,73,Clear sky,1.73
+2025-11-19 22:21:25,Visakhapatnam,IN,23.94,24.43,78,Mist,1.03
+2025-11-19 22:21:38,America,MX,24.84,24.87,57,Overcast clouds,2.52
+2025-11-19 22:22:15,New Jersey,US,5.22,1.55,90,Overcast clouds,5.14
