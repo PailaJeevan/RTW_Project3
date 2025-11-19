@@ -148,8 +148,15 @@ Coordinates input and class interactions.
 ---
 
 ## 👨‍💻 Author  
-**Paila Jeevan**  
-Flipkart Internship Task – Real-Time Weather Detection Application
+**Paila Jeevan** 
+
+---
+## 📩 Contact
+
+- 👨‍💻 **Developer:** Paila Jeevan
+- 📧 **Email:** pailajeevan21@gmail.com
+- 🌐 **GitHub:**
+https://github.com/PailaJeevan
 
 ---
 
