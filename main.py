@@ -8,7 +8,7 @@ from datetime import datetime # important import
 class Weather:
    
    def weather_info(city):
-    my_api_key = "8e564049b19165c70e94bb1f40c5f58c"   # My OpenWeather API key
+    my_api_key = "3baef602d85d48e2162473cdaaefdc1c"   # My OpenWeather API key
     url = "https://api.openweathermap.org/data/2.5/weather" #requesting this URL
 
     values = {
@@ -48,7 +48,7 @@ class Weather:
 class logging:
     # Storing Weather data in CSV file
   def store_weather_data(city):
-    my_api_key = "8e564049b19165c70e94bb1f40c5f58c"
+    my_api_key = "3baef602d85d48e2162473cdaaefdc1c"
     url = "https://api.openweathermap.org/data/2.5/weather"
     values = {
         "q": city,  # City name
@@ -87,4 +87,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
