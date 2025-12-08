@@ -1,5 +1,5 @@
-Timestamp,City,Country,Temperature (°C),Feels Like (°C),Humidity (%),Condition,Wind Speed (m/s)
-2025-11-19 22:20:56,Guntur,IN,18.95,18.81,73,Clear sky,1.73
-2025-11-19 22:21:25,Visakhapatnam,IN,23.94,24.43,78,Mist,1.03
-2025-11-19 22:21:38,America,MX,24.84,24.87,57,Overcast clouds,2.52
-2025-11-19 22:22:15,New Jersey,US,5.22,1.55,90,Overcast clouds,5.14
+Timestamp,City,Country,Temperature (ï¿½C),Feels Like (ï¿½C),Humidity (%),Condition,Wind Speed (m/s)
+2025-12-08 23:09:17,Guntur,IN,19.7,20.05,89,Clear sky,0.9
+2025-12-08 23:09:26,Goa,IN,25.21,24.78,38,Broken clouds,2.04
+2025-12-08 23:09:45,America,MX,22.21,21.22,28,Clear sky,2.46
+2025-12-08 23:09:56,New Jersey,US,-1.72,-8.44,32,Scattered clouds,7.72
