@@ -1,120 +1,96 @@
-# Real-Time Weather Information & Data Logger
+# 🌦️ Real-Time Weather Information & Data Logger  
+A Python application that fetches **live weather data**, displays it to the user, and stores it in a **CSV log file** with timestamps.
 
-A Python application that fetches **real-time weather data**, displays it to the user, and securely logs every weather query into a local file.  
-The program uses the **OpenWeatherMap API**, demonstrates **API integration**, **error handling**, and **Object-Oriented Programming (OOP)** concepts.
+## 📁 Project Structure
+```
+.
+├── main.py
+├── Data.py
+├── Storage.py
+└── weather_data.csv  (auto-generated)
+```
 
----
+## 🚀 Features
 
-## 📌 Task Overview
-
-### **Task Title:**  
-Real-Time Weather Information & Data Logger
-
-### **Task Description:**  
-The goal of this project is to create a Python program which:
-
-- Fetches live weather data from an open API (OpenWeatherMap)
-- Accepts city names from user input
-- Displays:
-  - Temperature (°C)
-  - Feels-like temperature
-  - Humidity (%)
-  - Weather condition
-  - Wind speed (m/s)
-- Logs each response with timestamp into a CSV (or SQLite database)
-- Implements proper error handling
-- Uses OOP concepts (classes & methods)
-
----
-
-## 🌤️ Features
-
-### ✔ Live Weather Fetching  
-Retrieves up‑to‑date weather information for any city.
-
-### ✔ User-Friendly Output  
-Displays neatly formatted weather details on the screen.
-
-### ✔ Automatic Logging  
-Stores each valid request in **weather_data.csv**, including:
-- Timestamp  
-- City  
-- Country  
+### ✔️ Fetch Live Weather Data  
+Uses OpenWeatherMap API to retrieve:
 - Temperature  
+- Feels like  
+- Humidity  
+- Weather condition  
+- Wind speed  
+
+### ✔️ Input-Based Data Retrieval  
+User enters a city name, the system fetches real-time weather.
+
+### ✔️ Error Handling  
+Handles:
+- Invalid city (404)  
+- Invalid API key (401)  
+- Rate limit exceeded (429)  
+- Server errors (500)  
+
+### ✔️ CSV Logging with Timestamp  
+Automatically stores data in **weather_data.csv** including:
+- Timestamp  
+- City & Country  
+- Temperature  
+- Feels like  
 - Humidity  
 - Condition  
-- Wind Speed  
+- Wind speed  
 
-### ✔ Robust Error Handling  
-Handles:
-- Invalid cities  
-- Wrong API keys  
-- Rate limit errors  
-- Network issues  
-- API server failures  
+### ✔️ Auto-Create CSV File  
+If `weather_data.csv` doesn’t exist, the program generates it with headers.
 
-### ✔ OOP-Based Architecture  
-Organized using:
-- `Weather` class → fetch & display  
-- `logging` class → store data  
+## 🧠 How the Application Works
 
----
+### 1️⃣ **User Input**
+The app asks for a city name.
 
-## 📂 Project Structure
+### 2️⃣ **Weather Fetching**
+`Weather.weather_info(city)` sends a GET request to OpenWeather API.
 
-```
-weather-app/
-│── main.py               # Main program and class definitions
-│── weather_data.csv      # Auto-created log file
-│── README.md             # Documentation
-```
+### 3️⃣ **Display Results**
+The system prints detailed weather results in the console.
 
----
+### 4️⃣ **Store Data**
+`logging.store_weather_data(city)` logs the data into a CSV file.
+
+## 📦 Requirements
+
+- Python 3.x  
+- `requests` library  
+  ```
+  pip install requests
+  ```
+- OpenWeatherMap API Key (already included in your code)
 
 ## ▶️ How to Run
 
-### 1. Install required library:
-```bash
-pip install requests
-```
+1. Save all project files in the same folder.
+2. Run the application:
 
-### 2. Run the program:
-```bash
+```
 python main.py
 ```
 
-### 3. Enter a city name:
-Example:
-```
-Enter City: London
-```
+3. Enter any city name when prompted.
 
----
-
-## 📄 Sample Output
+## 📝 Example Output
 
 ```
-Weather in London:
- Temperature: 16°C
- Feels Like: 15°C
- Condition: Clear Sky
- Humidity: 60%
- Wind Speed: 3.5 m/s
-
-Weather data for London stored in weather_data.csv
+Weather in Hyderabad:
+ Temperature: 29°C
+ Feels Like: 31°C
+ Condition: Clear sky
+ Humidity: 45%
+ Wind Speed: 3 m/s
 ```
 
----
-
-## 📝 CSV Logging Format
-
-Each row contains:
-
-| Timestamp | City | Country | Temp (°C) | Feels Like | Humidity (%) | Condition | Wind (m/s) |
-
-Example entry:
+Weather data is then saved inside:  
 ```
-2025-01-10 18:42:12,London,GB,16,15,60,Clear Sky,3.5
+weather_data.csv
 ```
 
 ---
@@ -136,14 +112,13 @@ Handles:
 Coordinates input and class interactions.
 
 ---
+## 🔮 Future Improvements
 
-## 🚀 Future Enhancements
-
-- SQLite database logging  
-- Graphical User Interface (GUI)  
-- Weather forecast (5-day or hourly)  
-- Web application version (Flask/FastAPI)  
-- Export logs to Excel/JSON  
+- GUI using Tkinter or PyQt  
+- Convert CSV logs into charts  
+- Add weekly/weekly forecast  
+- Error-based retry mechanism  
+- Use `.env` to hide API key
 
 ---
 
@@ -163,4 +138,3 @@ https://github.com/PailaJeevan
 ## 📜 License
 
 - **License:** MIT License — see the `LICENSE` file at the project root for full terms.
-
